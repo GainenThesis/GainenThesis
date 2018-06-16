@@ -1,33 +1,21 @@
 # GainenThesis
 
 ## ローカルで編集する方法
-一番最初だけダウンロードしてくる必要がある
-- git clone git@github.com:ktakeda0204/GainenThesis.git
-  - これでローカルにGainenThesisというフォルダができ、編集することができる。
-    - git に鍵認証しておく必要がある。https://github.com/settings/keysa
-    - それをローカルの ~/.ssh/に置く
-    - そして以下を実行する
-      - eval `ssh-agent`; ssh-add ~/.ssh/<作った鍵の名前>
-  - ダウンロードできなかったら上記を試した後、もう一回 git clone ~ をしてみる
+1. GainenThesisディレクトリの下で git branch を実行
+2. この時に以下のように出力され、 * が developOgawaにあることを確認する （これはオガワマン専用作業場所にいることを示している）
+  develop
+* developOgawa
+  master
+3. 編集したいものを編集し、最終的にコンパイルできることを確認しておく
 
-次に編集の方法。
-- TeXShopやらで普通に編集したい部分を編集して、main.texを開いてコンパイルが通ることを確認する。
-- これだけでは変更がローカルに留まったままなので、リモートリポジトリに変更点を取り入れる必要がある。
+変更点をリモートに取り入れるときは
+4. git status
+5. git add <④で表示されたファイル名1> <④で表示されたファイル名2>　・・・
+6. git commit -m "変更点を示すログメッセージ"
+7. git pull
+8. git push -u origin developOgawa:developOgawa
 
-使うコマンド。
-- git add <変更したファイル1> <変更したファイル2> <・・・>
-  - まず変更したファイルをリモートへと追加する前準備。
-
-- git commit
-  - こうすることでコミットメッセージ記入画面に切り替わるので、何を変更し追加したかを書く。
-  - git add と git commit を終えれば作業の第一段階終了。
-
-- git pull (慣れてきたら git remote updateと git merge --no-ff)
-  - もしかしたら同じファイルを他のユーザーが変更しているかもしれない
-  - このコマンドでいったん最新のリモートの状態を反映させる。これで第二段階終了。
-
-- git push -u origin master:master
-  - これでローカルの変更点をリモートへと追加できる。
+以上でリモートに取り入れれました。あとは developOgawa での変更点を更に最終的な master に取り入れる必要があって、それはまぁまた落ち着いたらで(´_ゝ｀)笑
 
 ## 各ファイルの説明
 main.tex
