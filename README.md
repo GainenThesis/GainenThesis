@@ -8,7 +8,7 @@
 変更点をリモートに取り入れるときは   
 1. git status   
 1. git add <④で表示されたファイル名1> <④で表示されたファイル名2>　・・・  
-1. git commit -m "変更点を示すログメッセージ"  
+1. git commit -m "変更点を示すログメッセージ(日本語OK)"  
 1. git pull  
 1. git push -u origin developOgawa:developOgawa   
 
