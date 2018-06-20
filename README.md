@@ -13,6 +13,7 @@
 1. git push -u origin developOgawa:developOgawa   
 
 以上でリモートに取り入れれました。あとは developOgawa での変更点を更に最終的な master に取り入れる必要があって、それはまぁまたやっとく(´_ゝ｀)笑
+1. Web上でマージリクエストを出す
 
 ## 各ファイルの説明
 main.tex
