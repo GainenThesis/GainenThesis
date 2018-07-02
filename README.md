@@ -14,6 +14,15 @@
 
 以上でリモートに取り入れれました。あとは developOgawa での変更点を更に最終的な master に取り入れる必要があって、それはまぁまたやっとく(´_ゝ｀)笑
 
+## リモートの変更をローカルで見る
+まずローカルで、
+1. git branch -a で master が表示の中にあることを確認する
+1. git status で "nothing to commit, working tree clean" と表示されることを確認する
+  1. 表示されなかったら、git add, commit を実行してコミットする
+1. git checkout master を実行する
+1. git pull -u origin master を実行する
+これで最終版(master)の変更点をローカルに持ってこれたので、あとはコンパイルすればよい。
+
 ## 各ファイルの説明
 main.tex
 - メインファイル。新しい章を追加するときは¥input{section/<新しい章>}の記述を記入する。  
