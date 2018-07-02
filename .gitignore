@@ -14,3 +14,6 @@ body/*.log
 *.gz
 *.toc
 main.pdf
+*.bbl
+*.blg
+
