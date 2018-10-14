@@ -8,11 +8,13 @@
 変更点をリモートに取り入れるときは   
 1. git status   
 1. git add <④で表示されたファイル名1> <④で表示されたファイル名2>　・・・  
-1. git commit -m "変更点を示すログメッセージ"  
+1. git commit -m "変更点を示すログメッセージ(日本語OK)"  
 1. git pull  
 1. git push -u origin developOgawa:developOgawa   
 
 以上でリモートに取り入れれました。あとは developOgawa での変更点を更に最終的な master に取り入れる必要があって、それはまぁまたやっとく(´_ゝ｀)笑
+1. Web上でマージリクエストを出す
+1. マージリクエストを許可する
 
 ## リモートの変更をローカルで見る
 まずローカルで、
