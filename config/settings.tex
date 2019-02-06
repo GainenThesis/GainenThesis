@@ -1,29 +1,28 @@
-\usepackage{geometry} 
+
+% 使用するパッケージ
+\usepackage{geometry}        % 項の表示方法
 \geometry{truedimen,left=25truemm,right=25truemm,top=30truemm,bottom=30truemm}
-\geometry{a4paper} % or letter or a5paper or ... etc
 \usepackage[dvipdfmx]{graphicx}
-\usepackage{float}
-\usepackage{siunitx} % si単位
-\usepackage{feynmf}
-\usepackage{listings}
-\usepackage{comment}
-\usepackage{csvsimple}
-\usepackage{lscape}
-\usepackage{fancybox,ascmac}
-
-
-
-\usepackage{subcaption}
-
+\usepackage{float}           % フロート環境
+\usepackage{siunitx}         % si単位
+\usepackage{feynmf}          % ファインマン・ダイアグラム
+\usepackage{listings}        % プログラミング言語、ソースリスト等の取り込み。
+\usepackage{comment}         % 複数行に渡る注釈。
+\usepackage{csvsimple}       % csvファイルの読み込み
+\usepackage{lscape}          % 図や表を回転させる
+\usepackage{fancybox,ascmac} % 文章や式を囲む
+\usepackage{subcaption}      % 並べた図・表に異なる見出しを付ける
+\usepackage{docmute}         % 他のTeXファイルの読み込み
+\usepackage[deluxe]{otf}
 
 \usepackage[dvipdfmx,% hyper link
-  colorlinks=false,
-  bookmarks=true,
-  bookmarksnumbered=false,
-  pdfborder={0 0 0},
-  bookmarkstype=toc]{hyperref} 
-\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}} %文字化け対策
-\setcounter{tocdepth}{3} %表示する目次の深さ
+ colorlinks=false,
+ bookmarks=true,
+ bookmarksnumbered=false,
+ pdfborder={0 0 0},
+ bookmarkstype=toc]{hyperref}
+%\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}} %文字化け対策
+\setcounter{tocdepth}{3}                      %表示する目次の深さ
 
 \renewcommand{\presectionname}{第} 
 \renewcommand{\postsectionname}{章}
@@ -39,6 +38,7 @@
 	\@addtoreset{table}{section}
 \makeatother
 
+% listings環境の設定
 \lstset{
   basicstyle=\ttfamily,
   commentstyle=\textit,
@@ -57,5 +57,5 @@
 \newcommand{\PLOTPATH}{../picuture}
 \newcommand{\REFPATH}{../refs}
 
-\graphicspath{{figures/} {section/TheoryOfATM/figures/} {section/Gainen/figures/} {section/Abapon/figures/} {section/Oyayubi/figures/} {section/TownWork/figures/} {section/Mimi/figures/} {section/MusicStation/figures/} {section/Matayo/figures/}{section/OgawaManYoushu/figures/}}
+\graphicspath{{figures/} {section/TheoryOfATM/figures/} {section/Gainen/figures/} {section/Abapon/figures/} {section/HigengoUniv/figures/} {section/Oyayubi/figures/} {section/TownWork/figures/} {section/Mimi/figures/} {section/MusicStation/figures/} {section/Matayo/figures/}{section/OgawaManYoushu/figures/}{section/Misuke/figures/}{section/Appendix/figures/}{section/ATMlimit/figures/}{section/OgawaDist/figures/}{section/sasakiLIVE/figures/}{section/OgawaWeb/figures/}}
 

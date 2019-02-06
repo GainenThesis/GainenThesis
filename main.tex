@@ -1,8 +1,12 @@
-\documentclass[12pt]{jsarticle}
-\usepackage{docmute}
-\input{./config/settings.tex}
 
+%\documentclass[11pt,a4paper]{jsarticle}
+%\input{./config/settings.tex}
+\documentclass[11pt,a4paper,uplatex,dvipdfmx]{jsreport_test}
+\input{./config/settings_new.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%
+% 　　　　表紙
+%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \def\@maketitle{
 \begin{center}
@@ -19,8 +23,6 @@
 \centering
  \includegraphics[clip,scale=0.1]{./kao}
 \end{figure}
-
-
 
 \vspace{5mm}
 
@@ -40,44 +42,79 @@
 \date{\today}
 
 \begin{document}
-\pagenumbering{roman}
 \maketitle
+\thispagestyle{empty} %表紙にページ番号を出力しない
+\newpage
+\thispagestyle{empty}
 
+%%%%%%%%%%%%%%%%%%%%%%%
+% 　　　　概要
+%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-　
-\newpage
+\thispagestyle{empty}
 {\huge 概要}\\
 これはひどい\sf (´\_ゝ｀)笑
 
+%%%%%%%%%%%%%%%%%%%%%%%
+% 　　　　目次
+%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\pagenumbering{roman}
 \tableofcontents
 
+%%%%%%%%%%%%%%%%%%%%%%%
+% 　　　セクション
+%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-
+\pagenumbering{arabic}
+%% 概念について
 \input{./section/Gainen/Gainen.tex}
-\newpage
+%% ATM理論
 \input{./section/TheoryOfATM/TheoryOfATM.tex}
-\newpage
+%%%% 非言語大学
+\input{./section/HigengoUniv/HigengoUniv.tex}
+%%%% アバポンヌ船長の文化的側面
 \input{./section/Abapon/AbaponnuSenchou.tex}
-\newpage
-\input{./section/Oyayubi/Oyayubi.tex}
-\newpage
+%%%% タウンワーク
 \input{./section/TownWork/TownWork.tex}
-\newpage
-\input{./section/Mimi/Mimi.tex}
-\newpage
-\input{./section/MusicStation/MusicStation.tex}
-\newpage
+%%% 食事という概念
+\input{./section/Shokuji/Shokuji.tex}
+%%%オガワマン登校分布
+\input{./section/OgawaDist/OgawaDist.tex}
+%%%ウンコ原理
+\input{./section/UnkoGenri/UnkoGenri.tex}
+%%% 小川万葉集
 \input{./section/OgawaManYoushu/OgawaManYoushu.tex}
-\newpage
+%%% CDTV、ミュージックステーション
+\input{./section/MusicStation/MusicStation.tex}
+%%% 親指人間
+\input{./section/Oyayubi/Oyayubi.tex}
+%オガワカオリ
+\input{./section/Kawori/Kawori_main.tex}
+%%%耳が縮む
+\input{./section/Mimi/Mimi.tex}
+%%% マタヨ小説
 \input{./section/Matayo/Matayo.tex}
-\newpage
-\input{./section/Sports/Sports.tex}
-\newpage
+%%% 佐々木ライブ
+\input{./section/sasakiLIVE/sasakiLIVE_main.tex}
+%%% ATMの限界について
+\input{./section/ATMlimit/ATMlimit.tex}
+%%% インティライミのホームページ
+\input{./section/OgawaWeb/OgawaWeb.tex}
+%%% ミスケについて
+\input{./section/Misuke/Misuke.tex}
+% 平カーテン
+\input{./section/Taira/Taira.tex}
+%%%%%%%%%%%%%%% 要新セクション
+% まとめ
 \input{./section/Summary/Summary.tex}
-
-
+\input{./section/Appendix/Appendix.tex}
+%
+%% 参考文献
 \bibliographystyle{junsrt}
 \bibliography{./reference/ref}
+
+% 索引
+\printindex
 
 \end{document}
